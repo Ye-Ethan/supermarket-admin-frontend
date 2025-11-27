@@ -29,7 +29,7 @@ const dialogShowId = ref(true);
 const dialogTitle = ref("");
 
 function logout() {
-  post("/user/logout").then(res => {
+  post("/auth/logout").then(res => {
     if (res.code===200) {
       userStore.clearUserInfo();
       router.push("/auth");

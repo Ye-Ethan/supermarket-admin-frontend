@@ -70,7 +70,7 @@ function register(registerForm) {
   }
   registerForm.validate(async (valid) => {
     if(valid){
-      post("/user/reg", {
+      post("/auth/reg", {
         username: form_user.value.username.trim(),
         password: form_user.value.password.trim(),
       }).then((res) => {
